@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: elector-test
+  labels:
+    app: elector
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: elector
+  template:
+    metadata:
+      labels:
+        app: elector
+    spec:
+      containers:
+      - name: elector
+        image: __REGISTRY__/elector-test
+      serviceAccountName: "elector"
