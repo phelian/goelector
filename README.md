@@ -21,14 +21,17 @@ Targets:
 
 ## Docker
 
-`$REGISTRY=gcr.io/<your_project> make docker`
+`$ REGISTRY=gcr.io/<your_project> make docker`
+
 Builds dockerfile, tags and pushes to registry
 
-`$REGISTRY=gcr.io/<your_project> make deploy`
+`$ REGISTRY=gcr.io/<your_project> make deploy`
+
 Deploys to active kubernetes cluster/namespace
 Using extended service account created by `$make deploy-sa`
 
-`$REGISTRY=gcr.io/<your_project> make check`
+`$ REGISTRY=gcr.io/<your_project> make check`
+
 Checks of elector is selected, example output
 
 ```
